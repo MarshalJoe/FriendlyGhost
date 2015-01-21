@@ -41,8 +41,8 @@ casper.start().each(links, function (self, link) {
 		var text = this.getElementsInfo('p');
 
 		// check text snippets for emails, then save
-		for(var k=0; k < text.length; k++) {
-			var elementText = text[k].text
+		for(var j=0; j < text.length; j++) {
+			var elementText = text[j].text
 			if (emailRegex.test(elementText)) {
 				var emailMatches = elementText.match(emailRegex);			
 				emailArray.push(emailMatches[0]);
@@ -53,7 +53,7 @@ casper.start().each(links, function (self, link) {
 		if (emailArray.length == 0) {
 			this.echo('No emails found');
 		} else {
-			for(var j=0; j < emailArray.length; j++) {
+			for(var k=0; k < emailArray.length; k++) {
 				this.echo(emailArray[j]);
 			}
 		}

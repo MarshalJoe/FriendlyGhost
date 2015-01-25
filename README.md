@@ -17,7 +17,7 @@ Once you've downloaded casper and phantom, clone this repo with git or download 
 
 #### Usage
 
-Once downloaded, add the sites you'd like to scrape for email addresses in the `links.txt` file, in the format:
+First, add the sites you'd like to scrape for email addresses in the `links.txt` file, in the format:
 
 ````
 http://www.somewebaddress.com
@@ -27,7 +27,7 @@ http://ruleofthrees.net
 
 You can also save a `.csv` file as a `links.txt' and it will format it correctly.
 
-Using your terminal, navigate to the project's root directory with `cd` and enter this command to start the scraper:
+Then using your terminal, navigate to the project's root directory with `cd` and enter this command to start the scraper:
 
 ````casperjs crawler.js````
 

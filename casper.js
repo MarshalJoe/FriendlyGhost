@@ -69,10 +69,15 @@ casper.start().each(links, function (self, link) {
 		if (emailArray.length == 0) { 
 			console.log("No emails found on this page.");
 		} else {
+			var downloadStream = fs.open('emails.txt', 'w');
 			for (email in emailArray) {
+				downloadStream.writeLine(emailArray[email]);
 				console.log(emailArray[email]);
 			}
+			downloadStream.flush();
+			downloadStream.close();
 		}
+
 
 	});
 

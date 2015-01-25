@@ -19,12 +19,15 @@ while(!openStream.atEnd()) {
     console.log(line);
 }
 
+openStream.flush();
+openStream.close();
+
 
 casper.start().each(links, function (self, link) {
 		self.thenOpen(link, function() {
 			
 			// GRAB EMAILS FROM LINKS AND HTML
-			// grab the "href" HTML attribute contents of every link and put them into an array
+			// grab the "href" HTML attribute and text content and put them into arrays
 			try {
 			var linkArray = this.getElementsAttribute('a', 'href');
 			var text = this.getElementsInfo('p');

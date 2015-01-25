@@ -15,6 +15,8 @@ Check that the dependencies have installed by entering `which phantomjs` and `wh
 
 Once you've downloaded casper and phantom, clone this repo with git or download its zipped contents using the link in the sidebar to the right.
 
+#### Usage
+
 Once downloaded, add the sites you'd like to scrape for email addresses in the `links.txt` file, in the format:
 
 ````

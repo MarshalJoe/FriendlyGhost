@@ -1,9 +1,25 @@
 var casper = require('casper').create();
+var fs = require('fs');
 
-var links = [
-	'http://bughunting.guide/',
-	'http://bughunting.guide/the-bug-hunt-intro-to-cross-site-scripting-xss/'
-]
+// the default file to be read is "links.txt", if you use another file, change it here.
+var file = "links.txt";
+var output = "emails.txt";
+
+var links = [];
+
+var stream = fs.open(file, 'r');
+
+while(!stream.atEnd()) {
+    var line = stream.readLine();
+    links.push(line);
+}
+
+console.log("Sites to be searched:");
+
+for (var l=0; l < links.length; l++) {
+	console.log(links[l]);
+}
+
 
 casper.start().each(links, function (self, link) {
 	self.thenOpen(link, function() {

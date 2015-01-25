@@ -1,2 +1,3 @@
 http://bughunting.guide/
 http://bughunting.guide/the-bug-hunt-intro-to-cross-site-scripting-xss/
+http://bughunting.guide/

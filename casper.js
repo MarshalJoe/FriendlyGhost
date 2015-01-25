@@ -7,10 +7,10 @@ var output = "emails.txt";
 
 var links = [];
 
-var stream = fs.open(file, 'r');
+var openStream = fs.open(file, 'r');
 
-while(!stream.atEnd()) {
-    var line = stream.readLine();
+while(!openStream.atEnd()) {
+    var line = openStream.readLine();
     links.push(line);
 }
 
@@ -24,7 +24,7 @@ for (var l=0; l < links.length; l++) {
 casper.start().each(links, function (self, link) {
 	self.thenOpen(link, function() {
 		// print website title
-		this.echo(this.getTitle());
+		this.echo('Searching ' + this.getCurrentUrl());
 
 		// GRAB EMAILS FROM LINKS
 		// grab the "href" HTML attribute contents of every link and put them into an array
@@ -65,12 +65,12 @@ casper.start().each(links, function (self, link) {
 			}
 		}
 
-		// print all the emails found
-		if (emailArray.length == 0) {
-			this.echo('No emails found');
+		// print out and write to file all the emails discovered for that url 
+		if (emailArray.length == 0) { 
+			console.log("No emails found on this page.");
 		} else {
-			for(var j=0; j < emailArray.length; j++) {
-				this.echo(emailArray[j]);
+			for (email in emailArray) {
+				console.log(emailArray[email]);
 			}
 		}
 

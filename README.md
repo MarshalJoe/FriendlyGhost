@@ -34,7 +34,7 @@ Then using your terminal, navigate to the project's root directory with `cd` and
 
 That's it! FG will log updates on the search to the terminal while saving any discovered email addresses to an `emails.txt` file it will create in the project directory.
 
-**License**
+#### License
 
 Copyright (c) 2015 Joe Marshall
 

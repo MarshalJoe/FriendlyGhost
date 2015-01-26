@@ -1,23 +1,23 @@
 # Friendly Ghost
-An Email Web Scraper powered by Casperjs and Phantomjs
+An web scraper for emails powered by [Casperjs](http://casperjs.org/), an extension of [Phantomjs](http://phantomjs.org/).
 
 #### Setup
 
-**Friendly Ghost** uses [Casperjs](http://casperjs.org/), an extension of [Phantomjs](http://phantomjs.org/), an open-source headless browser using Webkit built in Javascript, to search sites for email addresses.
+**Friendly Ghost** relies on Casperjs and Phantomjs.
 
-The best way to install these is npm via the terminal. The `-g` flag installs the packages system-wide.
+The best way to install these is through [npm (node package manager)](https://www.npmjs.com/) via the terminal. The `-g` flag makes them accessible system-wide.
 
 ````sudo npm install -g phantomjs && sudo npm -g install casperjs````
 
 Other installation options include [homebrew](http://brew.sh/) and [macports](https://www.macports.org/).
 
-Check that the dependencies have installed by entering `which phantomjs` and `which casperjs`, which will tell you their current location.
+Check that the dependencies have installed by entering `which phantomjs` and `which casperjs`, which will tell you the locations of each binary.
 
 Once you've downloaded casper and phantom, clone this repo with git or download its zipped contents using the link in the sidebar to the right.
 
 #### Usage
 
-First, add the sites you'd like to scrape for email addresses in the `links.txt` file, in the format:
+First, add the sites you'd like to search for emails in the `links.txt` file, in the format:
 
 ````
 http://www.somewebaddress.com
@@ -25,7 +25,8 @@ https://www.magazine.com/author/person/article/cool-stuff
 http://ruleofthrees.net
 ````
 
-You can also save a `.csv` file as a `links.txt' and it will format it correctly.
+
+(You can also save a `.csv` file as a `links.txt' and FG will read it correctly.)
 
 Then using your terminal, navigate to the project's root directory with `cd` and enter this command to start the scraper:
 

@@ -1,5 +1,5 @@
 # Friendly Ghost
-An command line web scraper for emails powered by [Casperjs](http://casperjs.org/), an extension of [Phantomjs](http://phantomjs.org/).
+A command line web scraper for email addresses powered by [Casperjs](http://casperjs.org/), an extension of [Phantomjs](http://phantomjs.org/).
 
 #### Setup
 

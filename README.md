@@ -26,7 +26,7 @@ http://ruleofthrees.net
 ````
 
 
-(You can also save a `.csv` file as a `links.txt' and FG will read it correctly.)
+Make sure that each URL is on its own line, with no surrounding quotes or brackets. (You can also save a `.csv` file as a `.txt` and FG will read it correctly.)
 
 Then using your terminal, navigate to the project's root directory with `cd` and enter this command to start the scraper:
 
